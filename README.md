@@ -37,7 +37,7 @@ git pull後に
 
 create_table.sqlファイルを以下のURLからダウンロードします。
 
-    https://ホスト名/examples/create_table.sql
+    https://ホスト名/examples/create_tables.sql
 
 WebブラウザでphpMyAdminへアクセスし、MySQLの管理者用アカウントでログインします。
 
@@ -48,6 +48,8 @@ pmaユーザーを作成するために、以下のSQLを実行します。PMA_U
     CREATE USER 'PMA_USERNAME'@'%' IDENTIFIED BY 'PMA_PASSWORD';
     GRANT ALL PRIVILEGES ON phpmyadmin.* TO 'PMA_USERNAME'@'%';
     FLUSH PRIVILEGES;
+
+以上で作業は完了です。
 
 ### 環境変数
 
