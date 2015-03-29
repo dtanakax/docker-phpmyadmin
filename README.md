@@ -1,4 +1,4 @@
-![phpMyAdmin 4.3.12](https://img.shields.io/badge/phpMyAdmin-4.3.12-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+![phpMyAdmin 4.3.13](https://img.shields.io/badge/phpMyAdmin-4.3.13-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 # docker-phpMyAdmin
 
@@ -43,7 +43,7 @@ WebブラウザでphpMyAdminへアクセスし、MySQLの管理者用アカウ�
 
 pmaテーブルを作成するために、ダウンロードしたcreate_table.sqlファイルをインポートしSQL実行します。
 
-pmaユーザーを作成するために、以下のSQLを実行します。PMA_USERNAME, PMA_PASSWORDには環境変数で設定した値を入力して下さい。
+pmaユーザーを作成するために、以下のSQLを実行します。<code>PMA_USERNAME</code>, <code>PMA_PASSWORD</code>には環境変数で設定した値を入力して下さい。
 
     CREATE USER 'PMA_USERNAME'@'%' IDENTIFIED BY 'PMA_PASSWORD';
     GRANT ALL PRIVILEGES ON phpmyadmin.* TO 'PMA_USERNAME'@'%';

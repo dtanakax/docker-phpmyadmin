@@ -10,7 +10,7 @@ ENV PMA_USERNAME        pma
 ENV PMA_PASSWORD        password
 ENV DB_HOST             localhost
 ENV DB_PORT             3306
-ENV VERSION             4.3.12
+ENV VERSION             4.3.13
 
 # Install packages
 RUN opkg-install wget tar
@@ -35,4 +35,4 @@ RUN chmod -R 755 /var/www/html
 # Define mountable directories.
 VOLUME ["/var/www/html"]
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ./entrypoint.sh
