@@ -4,14 +4,14 @@
 
 ### Base Docker Image
 
-[tanaka0323/storage](https://bitbucket.org/tanaka0323/docker-storage "tanaka0323/storage")
+[tanaka0323/storage](https://bitbucket.org/tanaka0323/docker-storage)
 
 ### 説明
 
 phpMyAdmin Dockerコンテナイメージです。
 
-[Dockerとは？](https://docs.docker.com/ "Dockerとは？")  
-[Docker Command Reference](https://docs.docker.com/reference/commandline/cli/ "Docker Command Reference")
+[Dockerとは？](https://docs.docker.com/)  
+[Docker Command Reference](https://docs.docker.com/reference/commandline/cli/)
 
 ### 使用方法
 
@@ -21,7 +21,7 @@ git pull後に
 
 イメージ作成
 
-    $ docker build -t <tag>/phpmyadmin .
+    $ docker build -t tanaka0323/phpmyadmin .
 
 起動
 
@@ -31,7 +31,7 @@ git pull後に
                  -e PMA_PASSWORD="password" \
                  -e DB_HOST="db" \
                  -e DB_PORT="3306" \
-                 -ti <tag>/phpmyadmin
+                 -ti tanaka0323/phpmyadmin
 
 ### 起動後に必要な作業
 
@@ -67,9 +67,9 @@ pmaユーザーを作成するために、以下のSQLを実行します。<code
 
 ### Figでの使用方法
 
-[Figとは](http://www.fig.sh/ "Figとは")  
+[Figとは](http://www.fig.sh/)  
 
-[設定ファイル記述例](https://bitbucket.org/tanaka0323/fig-examples "設定ファイル記述例")
+[設定ファイル記述例](https://bitbucket.org/tanaka0323/fig-examples)
 
 ### License
 
