@@ -37,7 +37,7 @@ git pull後に
 
 create_table.sqlファイルを以下のURLからダウンロードします。
 
-    https://ホスト名/examples/create_tables.sql
+    https://ホスト名/sql/create_tables.sql
 
 WebブラウザでphpMyAdminへアクセスし、MySQLの管理者用アカウントでログインします。
 
@@ -50,6 +50,15 @@ pmaユーザーを作成するために、以下のSQLを実行します。<code
     FLUSH PRIVILEGES;
 
 以上で作業は完了です。
+
+### 既知の不具合
+
+Nginx Reverse SSL Proxy使用時ログイン後ポート80番にリダイレクトされますが
+:80の部分を手動で削除してログインして下さい。
+
+    https://ホスト名:80/index.php?token=9300f277215dbc639f2efac5cd33e238
+    以下の様に修正
+    https://ホスト名/index.php?token=9300f277215dbc639f2efac5cd33e238
 
 ### 環境変数
 

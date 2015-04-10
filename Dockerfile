@@ -10,7 +10,7 @@ ENV PMA_USERNAME        pma
 ENV PMA_PASSWORD        password
 ENV DB_HOST             localhost
 ENV DB_PORT             3306
-ENV VERSION             4.3.13
+ENV VERSION             4.4.1.1
 
 # Install packages
 RUN opkg-install wget tar
