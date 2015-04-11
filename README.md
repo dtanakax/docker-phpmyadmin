@@ -1,19 +1,23 @@
 ![phpMyAdmin 4.3.13](https://img.shields.io/badge/phpMyAdmin-4.3.13-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-# docker-phpmyadmin
+docker-phpmyadmin
+=====================
 
-### Base Docker Image
+Base Docker Image
+---------------------
 
 [tanaka0323/storage](https://bitbucket.org/tanaka0323/docker-storage)
 
-### 説明
+説明
+---------------------
 
 phpMyAdmin Dockerコンテナイメージです。
 
 [Dockerとは？](https://docs.docker.com/)  
 [Docker Command Reference](https://docs.docker.com/reference/commandline/cli/)
 
-### 使用方法
+使用方法
+---------------------
 
 git pull後に
 
@@ -33,7 +37,8 @@ git pull後に
                  -e DB_PORT="3306" \
                  -ti tanaka0323/phpmyadmin
 
-### 起動後に必要な作業
+起動後に必要な作業
+---------------------
 
 create_table.sqlファイルを以下のURLからダウンロードします。
 
@@ -43,7 +48,7 @@ WebブラウザでphpMyAdminへアクセスし、MySQLの管理者用アカウ�
 
 pmaテーブルを作成するために、ダウンロードしたcreate_table.sqlファイルをインポートしSQL実行します。
 
-pmaユーザーを作成するために、以下のSQLを実行します。<code>PMA_USERNAME</code>, <code>PMA_PASSWORD</code>には環境変数で設定した値を入力して下さい。
+pmaユーザーを作成するために、以下のSQLを実行します。`PMA_USERNAME`, `PMA_PASSWORD`には環境変数で設定した値を入力して下さい。
 
     CREATE USER 'PMA_USERNAME'@'%' IDENTIFIED BY 'PMA_PASSWORD';
     GRANT ALL PRIVILEGES ON phpmyadmin.* TO 'PMA_USERNAME'@'%';
@@ -51,7 +56,8 @@ pmaユーザーを作成するために、以下のSQLを実行します。<code
 
 以上で作業は完了です。
 
-### 既知の不具合
+既知の不具合
+---------------------
 
 Nginx Reverse SSL Proxy使用時ログイン後ポート80番にリダイレクトされますが
 :80の部分を手動で削除してログインして下さい。
@@ -60,27 +66,31 @@ Nginx Reverse SSL Proxy使用時ログイン後ポート80番にリダイレク�
     以下の様に修正
     https://ホスト名/index.php?token=9300f277215dbc639f2efac5cd33e238
 
-### 環境変数
+環境変数
+---------------------
 
-- <code>PMA_SECRET</code>phpMyAdmin用秘密キー
-- <code>PMA_USERNAME</code>phpMyAdmin用ユーザー名
-- <code>PMA_PASSWORD</code>phpMyAdmin用パスワード
-- <code>DB_HOST</code>MySQLサーバーホスト名
-- <code>DB_PORT</code>MySQLサーバーポート番号
+- `PMA_SECRET` phpMyAdmin用秘密キー
+- `PMA_USERNAME` phpMyAdmin用ユーザー名
+- `PMA_PASSWORD` phpMyAdmin用パスワード
+- `DB_HOST` MySQLサーバーホスト名
+- `DB_PORT` MySQLサーバーポート番号
 
-### 利用可能なボリューム
+利用可能なボリューム
+---------------------
 
 以下のボリュームが利用可能
 
     /var/www/html       # phpMyAdminドキュメントルート
 
-### Docker Composeでの使用方法
+Docker Composeでの使用方法
+---------------------
 
 [Docker Composeとは](https://docs.docker.com/compose/)  
 
 [設定ファイル記述例](https://bitbucket.org/tanaka0323/compose-examples)
 
-### License
+License
+---------------------
 
 The MIT License
 Copyright (c) 2015 Daisuke Tanaka
