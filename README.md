@@ -1,4 +1,4 @@
-![phpMyAdmin 4.3.13](https://img.shields.io/badge/phpMyAdmin-4.3.13-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+![phpMyAdmin 4.4.1.1](https://img.shields.io/badge/phpMyAdmin-4.4.1.1-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 docker-phpmyadmin
 =====================
