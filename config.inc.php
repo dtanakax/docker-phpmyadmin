@@ -188,6 +188,11 @@ $cfg['Servers'][$i]['central_columns'] = 'pma__central_columns';
  */
 
 /*
+ * Force Redirect SSL
+ */
+$cfg['ForceSSL'] = 'true';
+
+/*
  * Directories for saving/loading files from server
  */
 $cfg['UploadDir'] = '';

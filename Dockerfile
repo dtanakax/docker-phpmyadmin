@@ -10,14 +10,13 @@ ENV PMA_USERNAME        pma
 ENV PMA_PASSWORD        password
 ENV DB_HOST             localhost
 ENV DB_PORT             3306
-ENV VERSION             4.4.6
+ENV VERSION             4.4.7
 
 # Install packages
 RUN opkg-install wget tar
 
 # Create directories
 RUN mkdir -p /var/www/
-RUN chmod -R 755 /var/www/
 
 COPY entrypoint.sh /entrypoint.sh
 COPY config.inc.php /config.inc.php
@@ -29,7 +28,6 @@ ADD http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/${VERSION}/ph
 RUN tar zxvf /phpmyadmin.tar.gz && \
     rm -f /phpmyadmin.tar.gz && \
     mv /phpMyAdmin-${VERSION}-all-languages /var/www/html && \
-    chown -R www-data:www-data /var/www/html && \
     chmod -R 755 /var/www/html
 
 ENTRYPOINT ["./entrypoint.sh"]
