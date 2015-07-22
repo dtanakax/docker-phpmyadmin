@@ -10,7 +10,7 @@ ENV PMA_USERNAME        pma
 ENV PMA_PASSWORD        password
 ENV DB_HOST             localhost
 ENV DB_PORT             3306
-ENV VERSION             4.4.11
+ENV VERSION             4.4.12
 
 # Install packages
 RUN opkg-install wget tar
@@ -24,9 +24,9 @@ RUN chown root:root /entrypoint.sh && \
     chmod +x /entrypoint.sh
 
 # Setup phpMyAdmin
-ADD http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/${VERSION}/phpMyAdmin-${VERSION}-all-languages.tar.gz /phpmyadmin.tar.gz
-RUN tar zxvf /phpmyadmin.tar.gz && \
-    rm -f /phpmyadmin.tar.gz && \
+ADD https://files.phpmyadmin.net/phpMyAdmin/${VERSION}/phpMyAdmin-${VERSION}-all-languages.zip /phpmyadmin.zip
+RUN unzip /phpmyadmin.zip && \
+    rm -f /phpmyadmin.zip && \
     mv /phpMyAdmin-${VERSION}-all-languages /var/www/html && \
     chmod -R 755 /var/www/html
 
