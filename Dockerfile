@@ -12,12 +12,8 @@ ENV DB_HOST             localhost
 ENV DB_PORT             3306
 ENV VERSION             4.4.12
 
-# Install packages
-RUN opkg-install wget tar
-
 # Create directories
 RUN mkdir -p /var/www/
-
 COPY entrypoint.sh /entrypoint.sh
 COPY config.inc.php /config.inc.php
 RUN chown root:root /entrypoint.sh && \
