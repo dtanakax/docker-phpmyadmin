@@ -10,7 +10,7 @@ ENV PMA_USERNAME        pma
 ENV PMA_PASSWORD        password
 ENV DB_HOST             localhost
 ENV DB_PORT             3306
-ENV VERSION             4.4.12
+ENV VERSION             4.4.13
 
 # Create directories
 RUN mkdir -p /var/www/
